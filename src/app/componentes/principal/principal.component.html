@@ -1,0 +1,28 @@
+<!-- principal.component.html -->
+
+<div>
+  <h2>Listado de Bibliotecas</h2>
+
+  <!-- Mostrar bibliotecas -->
+  <ul>
+    <li *ngFor="let biblioteca of bibliotecas">{{ biblioteca.nombre }} - {{ biblioteca.direccion }} - {{ biblioteca.ciudad }}</li>
+  </ul>
+
+  <hr>
+
+  <!-- Agregar nueva biblioteca -->
+  <h2>Agregar Nueva Biblioteca</h2>
+  <form (submit)="agregarNuevaBiblioteca()">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" [(ngModel)]="nombreBiblioteca" required>
+
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" [(ngModel)]="direccion" required>
+
+    <label for="ciudad">Ciudad:</label>
+    <input type="text" id="ciudad" [(ngModel)]="ciudad" required>
+
+    <button type="submit">Agregar Biblioteca</button>
+  </form>
+</div>
+
