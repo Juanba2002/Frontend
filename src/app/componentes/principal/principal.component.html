@@ -14,15 +14,14 @@
   <h2>Agregar Nueva Biblioteca</h2>
   <form (submit)="agregarNuevaBiblioteca()">
     <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" [(ngModel)]="nombreBiblioteca" required>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="Nombre" required>
 
     <label for="direccion">Dirección:</label>
-    <input type="text" id="direccion" [(ngModel)]="direccion" required>
+    <input type="text" id="direccion" name="direccion" [(ngModel)]="Direccion" required>
 
     <label for="ciudad">Ciudad:</label>
-    <input type="text" id="ciudad" [(ngModel)]="ciudad" required>
+    <input type="text" id="ciudad" name="ciudad" [(ngModel)]="Ciudad" required>
 
     <button type="submit">Agregar Biblioteca</button>
   </form>
 </div>
-

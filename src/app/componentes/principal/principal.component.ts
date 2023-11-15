@@ -10,9 +10,9 @@ export class PrincipalComponent implements OnInit {
 
   bibliotecas: any[] = []; // Asegúrate de inicializar la propiedad
 
-  nombreBiblioteca: string = '';
-  direccion: string = '';
-  ciudad: string = '';
+  Nombre: string = '';
+  Direccion: string = '';
+  Ciudad: string = '';
 
   constructor(private bibliotecaService: BibliotecaService) { }
 
@@ -34,7 +34,7 @@ export class PrincipalComponent implements OnInit {
   }
 
   agregarNuevaBiblioteca() {
-    this.bibliotecaService.agregarBiblioteca(this.nombreBiblioteca, this.direccion, this.ciudad).subscribe(
+    this.bibliotecaService.agregarBiblioteca(this.Nombre, this.Direccion, this.Ciudad).subscribe(
       (response) => {
         console.log('Biblioteca agregada:', response);
         // Puedes realizar acciones adicionales después de agregar la biblioteca
